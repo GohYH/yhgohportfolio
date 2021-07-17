@@ -42,9 +42,12 @@ img{
 }
 
 /* at top page */
+.helipad-container{
+margin-top: 20%;
+}
 .helipad img{
     width:20%;
-    margin:6% auto;
+    margin:0 auto;
     opacity: 0.3;
 }
 
@@ -68,7 +71,7 @@ img{
 }
 
 .helipad-textContent h2{
-    margin-top:-5%;
+    /* margin-top:10%; */
     font-family: monserrate, sans-serif;
     font-weight: 900;
     font-size: 3em;
@@ -211,7 +214,7 @@ font-size: 3em;
 .cardTop{
     background: var(--card_paleBlue2);
     box-shadow: var(--shadow);
-    padding: 1%;
+    padding: 2%;
 } 
 .card-grid-container{
     /* for plane fly through effect */
@@ -483,9 +486,8 @@ font-family: monserrate, sans-serif;
         border: 1px solid red;
         box-shadow: var(--shadow);
         border-radius: 6px;
-        /* overflow: hidden; */
-        
-        margin: 20% auto;
+        /* overflow: hidden; */   
+        margin: 10% auto;
         display: grid;
         /* grid: 3 cols */
         grid-template-columns: 3fr 2fr 1fr;
@@ -613,7 +615,7 @@ font-family: monserrate, sans-serif;
         }
         .helipad-textContent h2{
             font-size: 1.6em;
-            margin-bottom: 8%;       
+            margin-bottom: 20%;       
         }
         .text-content h1{
             padding-bottom: 5%;
@@ -626,10 +628,15 @@ font-family: monserrate, sans-serif;
         }
         /* to room for top & bottom to show planeLanding */
         .cardTop{
+           
           /* solve issue of cardTop item overlapping on bottom element  */
-          margin-top:3%;
-          margin-bottom: 3%;
-          background:none;    
+          /* margin-top:3%; */
+          /* margin-top:0; */
+          /* margin-bottom: 3%; */
+          /* margin-bottom: 0; */
+          margin-top: -10%;
+          background: none;
+          box-shadow: none;
         }
         .scrollingText h3{
             font-size: 1em;
@@ -639,12 +646,9 @@ font-family: monserrate, sans-serif;
             grid-template-columns: 1fr;
             justify-items: center;
             row-gap:0.5em;
-            width:100%;
-            /* margin-top:0;
-            padding-top:0; */
-           
+            width:100%; 
         }
-        
+
         /*AboutMe page*/
         .container-fluid-aboutMe h4, 
         .container-fluid-aboutMe h5{
@@ -699,9 +703,20 @@ font-family: monserrate, sans-serif;
         .showcase-container img{
             margin-top:0;
         }
+        .helipad-container{
+           padding-bottom: 0;
+        }
+        .helipad-textContent h2{
+            padding-top:3%;
+            font-size: 1.3em;
+            margin-bottom: 3%;       
+        }
     /* add more % to offset plane not reaching H-pad */
         .plane{
-         top:20%;
-         bottom:20%;
+         top:15%;
         }
+        .card-wrapper{
+            padding-bottom: 0;
+        }
+
     }
