@@ -15,6 +15,24 @@
     <link rel="stylesheet" href="./index.css">
 
     <title>Goh YH Portfolio</title>
+        <!-- temp -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+          $(window).scroll(function() {
+              if ($(this).scrollTop()>5)
+               {
+                 
+                  // $('.showcase-img-right').hide(1000);
+                  $('.plane').css("top", "60%"); 
+               }
+              else
+               {
+                // $('.showcase-img-right').show(10000);
+                $('.plane').css("top", "0"); 
+               }
+           });
+          </script>
+        <!-- temp end -->
 </head>
 <body>
   
@@ -111,6 +129,7 @@
               </h5>
           </section>
         </div>
+
         <!-- container-fluid End-->
           
           <div class="bottle">
@@ -120,18 +139,16 @@
             </a>
           </div>
    
-          <footer class="footer-section pt-3">
-            <div class="footer-container">
-              <a href="https://www.facebook.com/" target="_blank"><i class="social-icon fab fa-facebook-f fa-2x"></i></a>      
-              <a href="https://twitter.com/login?lang=en" target="_blank"><i class="social-icon fab fa-twitter fa-2x"></i></a>
-              <a href="https://www.instagram.com/accounts/login/?" target="_blank"><i class="social-icon fab fa-instagram fa-2x"></i></a>
-              <a href="https://mail.google.com/" target="_blank"><i class="social-icon fas fa-envelope fa-2x"></i></a>
-              <p class="text-white mt-3">© Copyright 2021. All Right Reserved</p>
-            </div>
-          </footer>  
-        <!-- </div>   -->
         <!-- container-fluid -->
-        
+               <footer class="footer-section footerAboutme pt-3">
+                <div class="footer-container">
+                  <a href="https://www.facebook.com/" target="_blank"><i class="social-icon fab fa-facebook-f fa-2x"></i></a>      
+                  <a href="https://twitter.com/login?lang=en" target="_blank"><i class="social-icon fab fa-twitter fa-2x"></i></a>
+                  <a href="https://www.instagram.com/accounts/login/?" target="_blank"><i class="social-icon fab fa-instagram fa-2x"></i></a>
+                  <a href="https://mail.google.com/" target="_blank"><i class="social-icon fas fa-envelope fa-2x"></i></a>
+                  <p class="text-white mt-3">© Copyright 2021. All Right Reserved</p>
+                </div>
+              </footer>  
           <!-- bootstrap popper -->
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
           
