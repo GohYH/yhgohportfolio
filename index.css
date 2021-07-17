@@ -319,6 +319,7 @@ p.card-bottom{
 }
 
 /* About Me page */
+
 .container-fluid-aboutMe{
     background-color: var(--card_paleBlue2);
     box-shadow: var(--shadow);
@@ -329,11 +330,12 @@ p.card-bottom{
     background-repeat: repeat;
 
     margin-top: 15%;
-    margin-bottom: 15%;
+    margin-bottom: 8%;
     padding-left: 5%;
     padding-right: 5%;
 
     opacity:0.9;
+  
 }
 .first-container-AM{
     padding-top:3%;
@@ -403,7 +405,6 @@ font-family: monserrate, sans-serif;
 }
 .cloud-wrapper{
     overflow: hidden;
-    /* width:80%; */
 }
 /* at footer */
 .bottle{
@@ -434,19 +435,16 @@ font-family: monserrate, sans-serif;
 
 .myWork-link{
     color: var(--bg_paleBlue1);
-    font-size: 3.5em;
+    font-size: 3em;
     font-weight: bold;
     text-shadow: var(--text-Shadow);  
-    padding-left:32%;
+    padding-left:36%;
     width:100%;
-}
-
-.footer-section{
-    margin-top: 10%;
+    margin:0 auto;
+    padding-bottom:3%;   
 }
 
 /* AboutMe - END */
-
 
 /* contactMe */
 
@@ -685,9 +683,9 @@ font-family: monserrate, sans-serif;
             padding-bottom: 5%;
         }
         .myWork-link{      
-            font-size: 2.2em; 
+            font-size: 1.5em; 
             /* reduced */
-            padding-left: 23%;  
+            padding-left: 16%;  
         }
         .contactMeTextContent{ 
             margin-left: -80%;
