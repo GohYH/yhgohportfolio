@@ -85,7 +85,7 @@ img{
 /* set plane to stick on loc */
 .plane{
     position: sticky;
-    top:10%;
+    top:15%;
 /* Raise item 1 level above helipad */
     z-index:1;
 }
@@ -220,16 +220,27 @@ font-size: 3em;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    gap: 2.5em;
-    justify-content:space-evenly;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    
+    column-gap: 1.5em;
+    margin: 1% auto;
+    width:90%;
 }
+
+.card-wrapper{
+    background: var(--darkBlue);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    padding:1em;
+    opacity: 0.9;
+    margin: 5%; 
+    max-width:270px;
+    max-height:90%;
+}
+
 .card-wrapper img{
-    max-height: 350px; 
-    max-width: 100%;
-    margin-top:10%; 
+  
+    margin:0 auto;
+    max-width: 80%;
+    margin-top:3%; 
 }
 
 a.card-link{
@@ -250,14 +261,6 @@ a.card-link{
     column-gap: 1.5em;
     margin-top:10%;
    
-}
-.card-wrapper{
-    background: var(--darkBlue);
-    box-shadow: var(--shadow);
-    border-radius: 6px;
-    padding:1em;
-    opacity: 0.9;
-    margin: 5%; 
 }
 
 /* animated card-link icon when card-wrapper is being hover over */
@@ -624,8 +627,8 @@ font-family: monserrate, sans-serif;
         /* to room for top & bottom to show planeLanding */
         .cardTop{
           /* solve issue of cardTop item overlapping on bottom element  */
-          margin-top:10%;
-          margin-bottom: 10%;
+          margin-top:3%;
+          margin-bottom: 3%;
           background:none;    
         }
         .scrollingText h3{
@@ -634,7 +637,12 @@ font-family: monserrate, sans-serif;
 
         .card-grid-container{
             grid-template-columns: 1fr;
+            justify-items: center;
             row-gap:0.5em;
+            width:100%;
+            /* margin-top:0;
+            padding-top:0; */
+           
         }
         
         /*AboutMe page*/
@@ -690,5 +698,10 @@ font-family: monserrate, sans-serif;
       /* homepage */
         .showcase-container img{
             margin-top:0;
+        }
+    /* add more % to offset plane not reaching H-pad */
+        .plane{
+         top:20%;
+         bottom:20%;
         }
     }
