@@ -167,6 +167,7 @@ font-size: 3em;
         height: 50px;	
         overflow: hidden;
         position: relative;
+        margin-bottom: 2%;
        }
        .scrollingText h3{
         font-size: 3vw;
@@ -214,6 +215,7 @@ font-size: 3em;
     background: var(--card_paleBlue2);
     box-shadow: var(--shadow);
     padding: 2%;
+   
 } 
 .card-grid-container{
     /* for plane fly through effect */
@@ -223,8 +225,9 @@ font-size: 3em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 1.5em;
-    margin: 1% auto;
-    width:90%;
+    /* margin: 1% auto; */
+    margin: 0 auto;
+    /* width:75%; */
 }
 
 .card-wrapper{
@@ -234,14 +237,12 @@ font-size: 3em;
     padding:1em;
     opacity: 0.9;
     margin: 5%; 
-    max-width:270px;
-    max-height:90%;
+    max-width:300px;
+    margin:0 auto;
 }
 
 .card-wrapper img{
-  
-    margin:0 auto;
-    max-width: 80%;
+    width:100%;
     margin-top:3%; 
 }
 
@@ -711,6 +712,7 @@ font-family: monserrate, sans-serif;
         }
         .card-wrapper{
             padding-bottom: 0;
+            margin-bottom:10%;
         }
 
     }
