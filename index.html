@@ -19,15 +19,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
       $(window).scroll(function() {
-          if ($(this).scrollTop()>5)
+          if ($(this).scrollTop()>1000)
            {
              
-              $('.helipad-footer img').show(1500);
+              // $('.showcase-img-right').hide(1000);
+              $('.plane').css("top", "50%"); 
            }
           else
            {
-            $('.helipad-footer img').hide(3000);
-
+            // $('.showcase-img-right').show(10000);
+            $('.plane').css("top", "15%"); 
            }
        });
       </script>
@@ -60,18 +61,18 @@
   
 
     <div container-fluid-I>
+        <div class="plane"> 
+          <img src="img/Plane_one.png" alt="">  
+        </div>
 
         <div class="helipad-container helipad">
           <img class="treeTop" src="img/treeTop_one.png" alt="tree">
           <img class="planeWrapper" src="img/planeLanding_round.png" alt="plane landing">
           <img src="img/treeTop_one.png" alt="tree">
         </div>
+        
         <div class="helipad-textContent">
           <h2>Ready Go!</h2>
-        </div>
-
-        <div class="plane"> 
-          <img src="img/Plane_one.png" alt="">  
         </div>
 
         <div class="sideNav">   
