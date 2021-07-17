@@ -10,6 +10,7 @@
 /* adding lt & right border color to body */
 html{
     background-color: var(--darkLimeGreen);
+    margin: 0 0.25em;
 }
 
 body{
@@ -48,9 +49,9 @@ img{
 }
 
 /* at footer */
-.helipad-footer{
+/* .helipad-footer{
     height:350px;
-}
+} */
 .helipad-footer img{
     /* position: relative; */
     /* top:3%; */
@@ -62,11 +63,8 @@ img{
 
 /* arrange in 3 columns */
 .helipad-container{
-    /* display:grid;
-    grid-template-columns: repeat(3, 1fr); */
     display: flex;
     flex-direction: row;
-
 }
 
 .helipad-textContent h2{
@@ -87,10 +85,8 @@ img{
 /* set plane to stick on loc */
 .plane{
     position: sticky;
-    /* margin-top:-3em; */
-    /* padding-left:2%; */
     top:10%;
-/* setting 1 will float plane above helipad */
+/* Raise item 1 level above helipad */
     z-index:1;
 }
 
@@ -215,7 +211,7 @@ font-size: 3em;
 .cardTop{
     background: var(--card_paleBlue2);
     box-shadow: var(--shadow);
-    padding: 5%;
+    padding: 1%;
 } 
 .card-grid-container{
     /* for plane fly through effect */
@@ -226,8 +222,8 @@ font-size: 3em;
     grid-template-rows: 1fr;
     gap: 2.5em;
     justify-content:space-evenly;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     
 }
 .card-wrapper img{
@@ -630,9 +626,12 @@ font-family: monserrate, sans-serif;
           /* solve issue of cardTop item overlapping on bottom element  */
           margin-top:10%;
           margin-bottom: 10%;
-          background:none;
-          
+          background:none;    
         }
+        .scrollingText h3{
+            font-size: 1em;
+        }
+
         .card-grid-container{
             grid-template-columns: 1fr;
             row-gap:0.5em;
