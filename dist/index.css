@@ -144,7 +144,29 @@ margin: 5% 0;
     text-decoration: none;
 
 }
-    /* media queries showcase - End */
+
+.showcase-container{     
+    width: 80%;
+    background: var(--card_paleBlue2);
+    border: 1px solid red;
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    margin: 18% auto;
+    display: grid;
+    grid-template-columns: 3fr 2fr 1fr; 
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+  
+    align-items: center;
+    /* for plane fly under */
+    position: relative;
+    z-index:1;
+    opacity:0.9;       
+background-image: url(img/cloud_one.png);
+background-position: center;
+background-size: cover;
+background-repeat: repeat;
+}
 
     /* html img size reduced */
     .showcase-img-right img{
@@ -475,33 +497,7 @@ font-family: monserrate, sans-serif;
     font-weight: bold;  
 }
 
-
-/* media queries showcase - start */
-@media only screen and (max-width: 2000px) {
-    .showcase-container{     
-        width:90%;
-        background: var(--card_paleBlue2);
-        border: 1px solid red;
-        box-shadow: var(--shadow);
-        border-radius: 6px;
-        /* overflow: hidden; */   
-        margin: 18% auto;
-        display: grid;
-        /* grid: 3 cols */
-        grid-template-columns: 3fr 2fr 1fr;
-        grid-template-rows: 1fr;
-        align-items: center;
-                /* for plane fly under */
-        position: relative;
-        z-index:1;
-        opacity:0.9;       
-    background-image: url(img/cloud_one.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    }
-
-}
+    
 
 @media only screen and (max-width:1200px) {
     /* index.js */
@@ -547,13 +543,14 @@ font-family: monserrate, sans-serif;
         .sideNav p{
             font-size: 0.7em;
         }
+  
         .showcase-container{
             overflow: hidden;
             display: grid;
             justify-items: center;
-            /* grid: 3 cols */
             grid-template-columns: 1fr;
-            row-gap: 3%;         
+            row-gap: 3%;   
+             
         }
         .portrait-left{
             margin-top: 5%;
@@ -604,7 +601,7 @@ font-family: monserrate, sans-serif;
            /* flex keeps content center by centering with space evenly */  
             display: flex;
             flex-direction: column;
-            justify-content:space-around;
+            justify-content:space-around; 
         }
         .showcase-container img{
             margin-top:3%;
@@ -641,7 +638,7 @@ font-family: monserrate, sans-serif;
             grid-template-columns: 1fr;
             justify-items: center;
             row-gap:0.5em;
-            width:100%; 
+            /* width:100%;  */
         }
 
         /*AboutMe page*/
