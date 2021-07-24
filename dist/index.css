@@ -53,15 +53,14 @@ margin: 5% 0;
 }
 
 /* at footer */
-/* .helipad-footer{
-    height:350px;
-} */
+.helipad-footer{
+    height: 350px;
+    margin-top:8%; 
+}
 .helipad-footer img{
-    /* position: relative; */
-    /* top:3%; */
     width:20%;
     margin: 0 auto;
-    padding: 7% 0; 
+    /* padding: 7% 0;  */
     opacity: 0.3;
 }
 
@@ -72,7 +71,7 @@ margin: 5% 0;
 }
 
 .helipad-textContent h2{
-    margin-top:5%;
+  
     font-family: monserrate, sans-serif;
     font-weight: 900;
     font-size: 3em;
@@ -89,7 +88,6 @@ margin: 5% 0;
 /* set plane to stick on loc */
 .plane{
     position: sticky;
-    /* top:20%; */
 /* Raise item 1 level above helipad */
     z-index:1;
 }
@@ -233,10 +231,13 @@ font-size: 3em;
 /* index.html => scrolling Text - End */
 
 }
+
+
 .cardTop{
     background: var(--card_paleBlue2);
     box-shadow: var(--shadow);
     padding: 2%;
+    margin-bottom: 25%;
    
 } 
 .card-grid-container{
@@ -250,6 +251,7 @@ font-size: 3em;
     /* margin: 1% auto; */
     margin: 0 auto;
     /* width:75%; */
+
 }
 
 .card-wrapper{
@@ -261,6 +263,27 @@ font-size: 3em;
     margin: 5%; 
     max-width:300px;
     margin:0 auto;
+}
+
+.cloud-drifting{
+        /* drifting cloud animation */
+        background-image: url(img/cloud-drifting.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat:no-repeat;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+     
+        /* Starting position */
+        -moz-transform:translateX(100%);
+        -webkit-transform:translateX(100%);	
+        transform:translateX(100%);
+        /* Apply animation to this element */	
+        -moz-animation: scrollingText 30s linear infinite;
+        -webkit-animation: scrollingText 30s linear infinite;
+        animation: scrollingText 30s linear infinite;
+    
 }
 
 .card-wrapper img{
@@ -429,6 +452,7 @@ font-family: monserrate, sans-serif;
     overflow: hidden;
 }
 /* at footer */
+
 .bottle{
     position: relative;
     z-index:1;
@@ -497,8 +521,6 @@ font-family: monserrate, sans-serif;
     font-weight: bold;  
 }
 
-    
-
 @media only screen and (max-width:1200px) {
     /* index.js */
     .sideNav{
@@ -524,6 +546,7 @@ font-family: monserrate, sans-serif;
         flex-direction: column;
         font-size:x-small;
     }
+
     /* contactme page */
     .contactMeContainer{
         /* background-image:none ; */
@@ -565,10 +588,9 @@ font-family: monserrate, sans-serif;
             gap:1em;
         }
         
-        p.card-bottom{
-            border-top:none;
+        .helipad-footer{
+            height: 220px;
         }
-
         /*AboutMe page*/
         .container-fluid-aboutMe h4, 
         .container-fluid-aboutMe h5{
@@ -584,6 +606,7 @@ font-family: monserrate, sans-serif;
         .contactMeTextContent{ 
             margin-left: -25%;
           }
+
     }
 
     @media only screen and (max-width:550px) {
@@ -623,12 +646,19 @@ font-family: monserrate, sans-serif;
             padding: 10%;  
            
         }
+
+    /* remove cloud on this viewport - as animation scroll caused a empty band on right screen */
+    .cloud-drifting{
+        display:none;
+    }
         /* to room for top & bottom to show planeLanding */
         .cardTop{
           /* solve issue of cardTop item overlapping on bottom element  */
           margin-top: -10%;
           background: none;
           box-shadow: none;
+          margin-bottom: 0;   
+
         }
         .scrollingText h3{
             font-size: 1em;
@@ -703,6 +733,7 @@ font-family: monserrate, sans-serif;
             font-size: 1.3em;
             margin-bottom: 3%;       
         }
+
     /* add more % to offset plane not reaching H-pad */
         .plane{
          top:15%;
