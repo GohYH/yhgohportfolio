@@ -20,7 +20,12 @@
         <script>
           $(window).scroll(function() {
 
+            // if($(this).scrollTop()> 20){
+            //   $('.plane').css("top", "-15%"); 
+            // } 
+
             if($(this).scrollTop()> 40){
+            
               $('.first-container-AM').addClass('standard-animation');
             }
 
@@ -28,19 +33,18 @@
             {
               
               $('.second-container-AM').addClass('standard-animation');
-                  
-                  // $('.plane').css("top", "60%"); 
-
-               }
-
-               if($(this).scrollTop()> 1000){
+              
+            }
+            
+            if($(this).scrollTop()> 1200){
+              
               $('.last-container-AM').addClass('standard-animation');
             }
 
               else
                {
-                // $('.showcase-img-right').show(10000);
-                $('.plane').css("top", "0"); 
+                $('.plane').css("top", "80%"); 
+      
                }
            });
           </script>
@@ -88,18 +92,18 @@
           <span>O</span>
           <span>!</span>
         </div>
-
-        <div class="plane"> 
         
+        <div class="plane">   
           <img src="img/Plane_one.png" alt="">
         </div>
+  
 <!-- Sticky Navbar -->
         <div class="sideNav">   
           <a href="index.html">
             <p>Home</p> 
            </a> 
          </div>
-      
+
         <div class="container-fluid-aboutMe ml-5 mr-5">
               <section class="first-container-AM animation-standard">
                   <div class="aboutMe-img">
@@ -116,7 +120,7 @@
                     to pick up <strong class="text-danger">Excel VBA programming</strong>, creating many application that increases productivity & efficiency.
                   </h5>
               </section>
-                
+
               <section class="second-container-AM middle-container animation-standard">
                 <div></div>
                 <div class="second-wrapper">
@@ -145,13 +149,11 @@
               </h4>
               <p class="text-muted"><strong>2020 - present</strong></p>
               <h5>
-               
                My passion grew deeper & I finally decided to sign up a Web Development course to improve the skill. i'd done pretty good for my first semester with both <strong class="text-danger">'A'</strong> for <strong class="text-danger">mobile Development Programming & Responsive Web Design</strong>. I'm in the midst of learning Backend development & will graduate around end-August this year. i'm waiting in anticipation to become a fully fledged Web Developer one day.
               </h5>
           </section>
         </div>
 
-        <!-- container-fluid End-->
           <div class="bottle">
             <img src="img/bottleGlass.png" alt="glass- bottle">
             <a href="index.html#target-link-reactProject">
