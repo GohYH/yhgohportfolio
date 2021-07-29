@@ -166,6 +166,7 @@ span:nth-child(12){
 
 .sideNavContactme{
     margin-top: -23em;
+    margin-left: 15px;
 }
 
 .sideNav{
@@ -183,12 +184,11 @@ span:nth-child(12){
     /* background-color: var(--darkLimeGreen); */
     color:whitesmoke;
     padding: 8px 6px;
-    margin-left:-70px;
+    margin-left:-85px;
     width: 100px;
     height: 40px;
     text-decoration: none;
     top:0%;
-  
 }
 
 .sideNav p{
@@ -643,12 +643,10 @@ font-family: monserrate, sans-serif;
 
 @media only screen and (max-width:1200px) {
     /* index.js */
-    .sideNav{
-        /* position: fixed; */
-        margin-left: 0.3em;
-    }
-    .sideNav p{
+    
+    .sideNav a p{
         font-size: 0.8em;
+        margin-left: -80px;
     }
     /* portrait */   
     .text-content{
@@ -728,6 +726,10 @@ font-family: monserrate, sans-serif;
             margin-left: -25%;
           }
 
+          .sideNavContactme{
+            margin-left: 20px;
+        }
+
     }
 
     @media only screen and (max-width:550px) {
@@ -737,7 +739,7 @@ font-family: monserrate, sans-serif;
         .first-container-AM, .second-container-AM, .last-container-AM{
             visibility: visible;
         }
-        
+
         html{
             margin: 0 0.6em;
         }
@@ -745,8 +747,9 @@ font-family: monserrate, sans-serif;
         .sideNav{
             margin-left: 0.9em;
         }
-        .sideNav p{
-            font-size: 0.6em;
+        .sideNav a p{
+            font-size: 0.7em;
+            margin-left:-85px;
         }
         .showcase-container{
            /* flex keeps content center by centering with space evenly */  
@@ -845,6 +848,9 @@ font-family: monserrate, sans-serif;
           }
          img.paperPlane{
          width:95%;
+    }
+    .sideNavContactme{
+        margin-left: 25px;
     }
     }
 
