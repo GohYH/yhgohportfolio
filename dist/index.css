@@ -11,9 +11,11 @@
 html{
     background-color: var(--darkLimeGreen);
     margin: 0 0.25em;
+    scroll-behavior: smooth;
 }
 
 body{
+ 
     background-color: var(--bg_paleBlue1);
     margin:0;
     padding: 0;   
@@ -52,11 +54,7 @@ margin: 5% 0;
     opacity: 0.3;
 }
 
-/* at footer */
-.helipad-footer{
-    height: 350px;
-    margin-top:8%; 
-}
+
 .helipad-footer img{
     width:20%;
     margin: 0 auto;
@@ -67,31 +65,99 @@ margin: 5% 0;
 /* arrange in 3 columns */
 .helipad-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+}
+.helipad-textContent {
+    /* margin-left: 35%; */
+    text-align: center;
+/* this gives every letter some vanishing point */
+    perspective: 800px;
 }
 
-.helipad-textContent h2{
-  
+ /* ready go text flipup animation Start */
+.helipad-textContent span{
+    /* overflow: hidden; */
     font-family: monserrate, sans-serif;
     font-weight: 900;
-    font-size: 3em;
+    font-size: 3.5em;
     color: var(--Text_darkRed);
-    text-align: center;
     opacity:0.8;
+    /* important: must set inline-block inorder for animation to work */
+    display: inline-block;
+    /* x: 50% of the way across letter bound by box & 70% */
+    transform-origin: 50% 70%;
+}
+/* alternate text color */
+span:nth-child(2n){
+    color: lightsalmon;
 }
 
-.helipad-textContent h2:hover{
-    transform: scale(1.1);
-    transition: all 1s linear;
-    opacity: 1;
+span:nth-child(1){
+    animation: flipUp 2s cubic-bezier(0.68, -0.55, 0.26, 1.55) both;
 }
+span:nth-child(2){
+    /* second set 0.2 is delay time */
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.2s both;
+}
+span:nth-child(3){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.4s both;
+}
+span:nth-child(4){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.6s both;
+}
+span:nth-child(5){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 0.8s both;
+}
+span:nth-child(6){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.0s both;
+}
+span:nth-child(7){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.2s both;
+}
+/* Ready-Go END here - we have landed continue till nth-child(12) */
+span:nth-child(8){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.4s both;
+}
+span:nth-child(9){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.6s both;
+}
+span:nth-child(10){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 1.8s both;
+}
+span:nth-child(11){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 2s both;
+}
+span:nth-child(12){
+    animation: flipUp 1s cubic-bezier(0.68, -0.55, 0.26, 1.55) 2.2s both;
+}
+
+@keyframes flipUp {
+    from {transform: rotateX(90deg);}
+    to {transform: rotateX(0deg);}
+         }
+
+ /* ready go text flipup animation END */
+
+
 /* set plane to stick on loc */
 .plane{
     position: sticky;
 /* Raise item 1 level above helipad */
     z-index:1;
+/* create movement for plane */
+    animation: plane 6s linear 1s infinite;
+    perspective:1000px;     
 }
 
+@keyframes plane{
+        0%{transform: translateY(0);}
+        15%{transform: translateY(8px);}
+        25%{transform: translateY(0);}
+        45%{transform: translateY(8px);}
+        75%{transform: translateY(0);}
+        85%{transform: translateY(8px);}
+        100%{transform: translateY(0);}      
+} 
 .plane img{
     text-align: center;
     width:17%;
@@ -142,6 +208,29 @@ margin: 5% 0;
     text-decoration: none;
 
 }
+
+/* slideIn Card animation START */
+.showcase-wrapper{
+    animation: slideIn 4s linear, fadeIn 2s ease-in;
+}
+@keyframes slideIn{
+    0%{transform: translateY(400px);
+    animation-timing-function: ease-out}
+
+    60%{transform: translateY(-50px);
+    animation-timing-function: ease-in}
+
+    80%{transform: translateY(10px);
+    animation-timing-function: ease-out}
+
+    100%{transform:translateY(0);
+    animation-timing-function: ease-in}
+}
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to{opacity:1;}
+}
+/* slideIn Card animation END */
 
 .showcase-container{     
     width: 80%;
@@ -232,13 +321,13 @@ font-size: 3em;
 
 }
 
-
 .cardTop{
+    
     background: var(--card_paleBlue2);
     box-shadow: var(--shadow);
     padding: 2%;
     margin-bottom: 25%;
-   
+    overflow: hidden;
 } 
 .card-grid-container{
     /* for plane fly through effect */
@@ -251,6 +340,7 @@ font-size: 3em;
     /* margin: 1% auto; */
     margin: 0 auto;
     /* width:75%; */
+    overflow: hidden;
 
 }
 
@@ -382,14 +472,49 @@ p.card-bottom{
     opacity:0.9;
   
 }
+/* 3 container visibility set to hidden. this'll be changed to visible when Jquery addclass of standard-animation */
 .first-container-AM{
+    margin-top: 25%;
+    margin-bottom: 8%;
     padding-top:3%;
-    padding-bottom: 3%;
+    /* padding-bottom: 3%; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    visibility: hidden;
 }
+.second-container-AM{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
+    justify-self: right;
+    visibility: hidden;
+}
+.last-container-AM{
+    visibility: hidden;
+}
+.standard-animation{
+    visibility: visible;
+    animation: sideSlideIn 6s linear, fadeIn 3s ease-in;
+}
+@keyframes sideSlideIn{
+        
+        0%{transform: translateY(300px);
+            animation-timing-function: ease-in;
+    }
+        
+          60%{transform: translateY(-10px);
+            animation-timing-function: ease-out;
+        }
+        80%{transform: translateY(10px);
+            animation-timing-function: ease-in;
 
+        }
+        100%{transform: translateY(0);
+            animation-timing-function: ease-out;
+        }
+}
+ 
 /* 1st-img */
 .aboutMe-img img{
     width:60%;
@@ -417,20 +542,15 @@ font-family: monserrate, sans-serif;
 }
 
 .second-container-AM h5{
+    margin-bottom: 10%;
     font-family: monserrate, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.5px;
     text-align: justify;
     padding-right: 5%;
+    
 }
 
-.second-container-AM{
-    display: grid;
-    grid-template-columns: 60% 40%;
-    align-items: center;
-    justify-self: right;
-
-}
 
 .webDev-img img{
     width: 90%;
@@ -590,6 +710,7 @@ font-family: monserrate, sans-serif;
         
         .helipad-footer{
             height: 220px;
+        
         }
         /*AboutMe page*/
         .container-fluid-aboutMe h4, 
@@ -610,6 +731,13 @@ font-family: monserrate, sans-serif;
     }
 
     @media only screen and (max-width:550px) {
+        .standard-animation{
+            animation: none;
+        }
+        .first-container-AM, .second-container-AM, .last-container-AM{
+            visibility: visible;
+        }
+        
         html{
             margin: 0 0.6em;
         }
@@ -633,7 +761,7 @@ font-family: monserrate, sans-serif;
         .portrait-left{
             margin: 0;
         }
-        .helipad-textContent h2{
+        .helipad-textContent span{
             font-size: 1.6em;
             margin-bottom: 20%;       
         }
@@ -728,7 +856,7 @@ font-family: monserrate, sans-serif;
         .helipad-container{
            padding-bottom: 0;
         }
-        .helipad-textContent h2{
+        .helipad-textContent span{
             padding-top:3%;
             font-size: 1.3em;
             margin-bottom: 3%;       
