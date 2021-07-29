@@ -24,27 +24,27 @@
             //   $('.plane').css("top", "-15%"); 
             // } 
 
-            if($(this).scrollTop()> 40){
+            if($(this).scrollTop()>30)
+            {
+              $('.plane').css("top", "60%"); 
             
               $('.first-container-AM').addClass('standard-animation');
             }
 
             if ($(this).scrollTop()>500)
             {
-              
               $('.second-container-AM').addClass('standard-animation');
               
             }
             
-            if($(this).scrollTop()> 1200){
-              
+            if($(this).scrollTop()> 1200)
+            {
               $('.last-container-AM').addClass('standard-animation');
             }
 
               else
                {
-                $('.plane').css("top", "80%"); 
-      
+                $('.plane').css("top", "15%"); 
                }
            });
           </script>
@@ -75,14 +75,15 @@
         </div>
       </nav>
 
+  
       <div class="container-fluid">
         <div class="helipad-container helipad">
           <img class="treeTop" src="img/treeTop_one.png" alt="tree">
           <img class="planeWrapper" src="img/planeLanding_round.png" alt="plane landing">
           <img src="img/treeTop_one.png" alt="tree">
         </div>
-        
-        <div class="helipad-textContent">
+      
+        <div class="helipad-textContent aboutMe-helipad-container">
           <span>R</span>
           <span>E</span>
           <span>A</span>
@@ -92,18 +93,19 @@
           <span>O</span>
           <span>!</span>
         </div>
-        
-        <div class="plane">   
-          <img src="img/Plane_one.png" alt="">
+
+        <div class="plane aboutMe-plane">   
+          <img src="img/Plane_one.png" alt="plane">
         </div>
-  
-<!-- Sticky Navbar -->
+
+        <!-- Sticky Navbar -->
         <div class="sideNav">   
           <a href="index.html">
             <p>Home</p> 
-           </a> 
-         </div>
-
+          </a> 
+        </div>
+     
+        
         <div class="container-fluid-aboutMe ml-5 mr-5">
               <section class="first-container-AM animation-standard">
                   <div class="aboutMe-img">
@@ -172,6 +174,7 @@
                   <p class="text-white mt-3">© Copyright 2021. All Right Reserved</p>
                 </div>
               </footer>  
+
           <!-- bootstrap popper -->
           <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
           
