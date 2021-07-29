@@ -161,7 +161,9 @@ span:nth-child(12){
 .plane img{
     text-align: center;
     width:17%;
-    margin: -35% auto 0 auto;
+    /* margin: -35% auto 0 auto; */
+    margin:  0 auto;
+  
    
 }
 
@@ -338,9 +340,7 @@ font-size: 3em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     column-gap: 1.5em;
-    /* margin: 1% auto; */
     margin: 0 auto;
-    /* width:75%; */
     overflow: hidden;
 
 }
@@ -464,7 +464,6 @@ p.card-bottom{
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
-
     margin-top: 15%;
     margin-bottom: 8%;
     padding-left: 5%;
@@ -475,10 +474,8 @@ p.card-bottom{
 }
 /* 3 container visibility set to hidden. this'll be changed to visible when Jquery addclass of standard-animation */
 .first-container-AM{
-    margin-top: 25%;
-    margin-bottom: 8%;
+    /* margin-bottom: 8%; */
     padding-top:3%;
-    /* padding-bottom: 3%; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -543,14 +540,12 @@ font-family: monserrate, sans-serif;
 }
 
 .second-container-AM h5{
-    /* margin-bottom: 10%; */
     font-family: monserrate, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.5px;
     text-align: justify;
     padding-right: 5%;  
 }
-
 
 .webDev-img img{
     width: 90%;
@@ -559,15 +554,7 @@ font-family: monserrate, sans-serif;
 .second-wrapper{
     margin-right:0;
 }
-/* shift up frontEndDev to reduce unwanted empty space */
-.middle-container{
-    margin-top:-22%;
-}
-/* shift up Singapore poly to reduce unwanted empty space */
-.last-container-AM{
-    margin-bottom: 3%;
-    margin-top: -20%;
-}
+
 .cloud-wrapper{
     overflow: hidden;
 }
@@ -640,8 +627,16 @@ font-family: monserrate, sans-serif;
 .emailText{
     font-weight: bold;  
 }
+@media only screen and (max-width:2000px){
+    .plane{
+        margin-top:-450px;
+    }
+}
 
 @media only screen and (max-width:1200px) {
+    .plane{
+        margin-top:-300px;
+    }
     /* index.js */
     
     .sideNav a p{
@@ -676,6 +671,15 @@ font-family: monserrate, sans-serif;
 }
 
 @media only screen and (max-width:1000px) {
+    .container-fluid-aboutMe{
+        margin-top: 35%;
+    }
+    .aboutMe-helipad-container{
+        margin-bottom: 100px;
+    }
+    .showcase-wrapper{
+        margin-top: 230px;
+    }
         /* index.js */
         .sideNav{
             /* position: fixed; */
@@ -732,7 +736,12 @@ font-family: monserrate, sans-serif;
 
     }
 
-    @media only screen and (max-width:550px) {
+    @media only screen and (max-width:550px) {    
+   
+    .aboutMe-helipad-container{
+        margin-bottom: 150px;
+    }
+
         .standard-animation{
             animation: none;
         }
@@ -766,7 +775,6 @@ font-family: monserrate, sans-serif;
         }
         .helipad-textContent span{
             font-size: 1.6em;
-            margin-bottom: 20%;       
         }
         .text-content h1{
             padding-bottom: 5%;
@@ -774,8 +782,7 @@ font-family: monserrate, sans-serif;
         .text-content{
             text-align: center;
             font-size: xx-small;
-            padding: 10%;  
-           
+            padding: 10%;       
         }
 
     /* remove cloud on this viewport - as animation scroll caused a empty band on right screen */
@@ -810,7 +817,6 @@ font-family: monserrate, sans-serif;
 
         .first-container-AM{
             padding-top:5%;
-            padding-bottom: 5%;
             align-items: left;
         }
         
@@ -829,9 +835,7 @@ font-family: monserrate, sans-serif;
         }
         /* change to 1 col */
         .second-container-AM{
-            grid-template-columns: 0 100%;
-            margin-top: 3%;
-           
+            grid-template-columns: 0 100%;   
         }
         .last-container{
             margin-top: 10%;
@@ -855,7 +859,11 @@ font-family: monserrate, sans-serif;
     }
 
     @media only screen and (max-width:460px) {
+   
       /* homepage */
+    .aboutMe-sideNav{
+        margin-top: 50px;
+    }
         .showcase-container img{
             margin-top:0;
         }
