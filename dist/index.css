@@ -162,6 +162,7 @@ span:nth-child(12){
     text-align: center;
     width:17%;
     margin: -35% auto 0 auto;
+   
 }
 
 .sideNavContactme{
@@ -542,13 +543,12 @@ font-family: monserrate, sans-serif;
 }
 
 .second-container-AM h5{
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
     font-family: monserrate, sans-serif;
     line-height: 1.4;
     letter-spacing: 0.5px;
     text-align: justify;
-    padding-right: 5%;
-    
+    padding-right: 5%;  
 }
 
 
@@ -564,7 +564,7 @@ font-family: monserrate, sans-serif;
     margin-top:-22%;
 }
 /* shift up Singapore poly to reduce unwanted empty space */
-.last-container{
+.last-container-AM{
     margin-bottom: 3%;
     margin-top: -20%;
 }
