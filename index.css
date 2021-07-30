@@ -22,6 +22,7 @@ body{
  /* this allow html background to set left & right border color */
     margin-left:3%;
     margin-right: 3%;
+
 }
 
 img{
@@ -54,28 +55,33 @@ margin: 5% 0;
     opacity: 0.3;
 }
 
+/* .helipad-footer{
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+} */
 .helipad-footer img{
-    width:20%;
-    margin: 0 auto;
+    /* width:20%; */
     /* padding: 7% 0;  */
     opacity: 0.3;
 }
 
-/* arrange in 3 columns */
-.helipad-container{
+/* home page on & bottom helipad */
+.helipad-container, .helipad-footer{
     display: flex;
     flex-direction: row; 
+    justify-content: center;
 }
 .helipad-textContent {
-    /* margin-left: 35%; */
     text-align: center;
 /* this gives every letter some vanishing point */
     perspective: 800px;
 }
 
  /* ready go text flipup animation Start */
-.helipad-textContent span{
+.helipad-textContent span, .helipad-footer span{
     /* overflow: hidden; */
     font-family: monserrate, sans-serif;
     font-weight: 900;
@@ -212,8 +218,9 @@ span:nth-child(12){
 
 }
 
-/* slideIn Card animation START */
-.showcase-wrapper{
+/* slideIn Card animation START - homepage & contactMe.html*/
+
+.showcase-wrapper, .contactMeTextContent{
     animation: slideIn 4s linear, fadeIn 2s ease-in;
 }
 @keyframes slideIn{
@@ -246,7 +253,6 @@ span:nth-child(12){
     grid-template-columns: 3fr 2fr 1fr; 
     grid-template-rows: 1fr;
     justify-content: space-around;
-  
     align-items: center;
     /* for plane fly under */
     position: relative;
@@ -620,6 +626,8 @@ font-family: monserrate, sans-serif;
     display: flex;
     flex-direction: row;
 }
+
+
 .contactMeTextContent h1{ 
   margin-top:50%;
 }
@@ -695,7 +703,7 @@ font-family: monserrate, sans-serif;
             justify-items: center;
             grid-template-columns: 1fr;
             row-gap: 3%;   
-             
+           
         }
         .portrait-left{
             margin-top: 5%;
@@ -725,6 +733,7 @@ font-family: monserrate, sans-serif;
             /* reduced */
             padding-left: 28%;  
         }
+ 
 /* contactme.html */
         .contactMeTextContent{ 
             margin-left: -25%;
@@ -773,8 +782,9 @@ font-family: monserrate, sans-serif;
         .portrait-left{
             margin: 0;
         }
-        .helipad-textContent span{
-            font-size: 1.6em;
+        .helipad-textContent span, .helipad-footer span{
+            font-size: 2.5em;
+            margin-top: 10%;
         }
         .text-content h1{
             padding-bottom: 5%;
@@ -864,18 +874,23 @@ font-family: monserrate, sans-serif;
     .aboutMe-sideNav{
         margin-top: 50px;
     }
+
+    .showcase-container{
+    /* increase width to avoid looking being pinch */
+    width:95%;
+    }
         .showcase-container img{
             margin-top:0;
         }
         .helipad-container{
            padding-bottom: 0;
         }
-        .helipad-textContent span{
+        .helipad-textContent span, .helipad-footer span{
             padding-top:3%;
             font-size: 1.3em;
             margin-bottom: 3%;       
         }
-
+   
     /* add more % to offset plane not reaching H-pad */
         .plane{
          top:15%;
