@@ -1,3 +1,13 @@
+.container-page{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    
+}
+.container-col-left{
+    background-color: lime;
+    width:20%;
+}
+
 :root{
     --darkBlue: #00008b;
     --Text_darkRed: #8b0000;
@@ -15,13 +25,12 @@ html{
 }
 
 body{
- 
     background-color: var(--bg_paleBlue1);
     margin:0;
     padding: 0;   
  /* this allow html background to set left & right border color */
-    margin-left:3%;
-    margin-right: 3%;
+    margin-left:3.5%;
+    margin-right: 3.5%;
 
 }
 
@@ -144,6 +153,11 @@ span:nth-child(12){
 
  /* ready go text flipup animation END */
 
+ /* set to absolute so plane will overlap on top  */
+ .container-plane-component{
+    position: absolute;
+    left:5px;
+}
 
 /* set plane to stick on loc */
 .plane{
@@ -169,13 +183,11 @@ span:nth-child(12){
     width:17%;
     /* margin: -35% auto 0 auto; */
     margin:  0 auto;
-  
-   
 }
 
 .sideNavContactme{
-    margin-top: -23em;
-    margin-left: 15px;
+    margin-top: -13em;
+    margin-left: 10px;
 }
 
 .sideNav{
@@ -217,9 +229,12 @@ span:nth-child(12){
     text-decoration: none;
 
 }
+.showcase-wrapper{
+    position: relative;
+    top:150px;
+}
 
 /* slideIn Card animation START - homepage & contactMe.html*/
-
 .showcase-wrapper, .contactMeTextContent{
     animation: slideIn 4s linear, fadeIn 2s ease-in;
 }
@@ -474,9 +489,9 @@ p.card-bottom{
     margin-bottom: 8%;
     padding-left: 5%;
     padding-right: 5%;
-
     opacity:0.9;
-  
+    position: relative;
+    top:150px;  
 }
 /* 3 container visibility set to hidden. this'll be changed to visible when Jquery addclass of standard-animation */
 .first-container-AM{
@@ -568,6 +583,7 @@ font-family: monserrate, sans-serif;
 
 .bottle{
     position: relative;
+    top:150px;
     z-index:1;
     opacity:0.8;
     
@@ -575,8 +591,7 @@ font-family: monserrate, sans-serif;
     width:80%;
     background: var(--darkBlue);
     border-radius:10px;
-    box-shadow: var(--shadow);
-    
+    box-shadow: var(--shadow); 
 }
 
 .bottle img{
@@ -591,7 +606,10 @@ font-family: monserrate, sans-serif;
     transition: 1s all linear;
 
 }
-
+.footerAboutme{
+    position:relative;
+    top:100px;
+}
 .myWork-link{
     color: var(--bg_paleBlue1);
     font-size: 3em;
@@ -635,16 +653,9 @@ font-family: monserrate, sans-serif;
 .emailText{
     font-weight: bold;  
 }
-@media only screen and (max-width:2000px){
-    .plane{
-        margin-top:-450px;
-    }
-}
 
 @media only screen and (max-width:1200px) {
-    .plane{
-        margin-top:-300px;
-    }
+ 
     /* index.js */
     
     .sideNav a p{
@@ -673,9 +684,7 @@ font-family: monserrate, sans-serif;
         /* background-image:none ; */
         background-image: url(img/cloud_one.png);
         opacity:0.9;
-
     }
-
 }
 
 @media only screen and (max-width:1000px) {
@@ -866,15 +875,21 @@ font-family: monserrate, sans-serif;
     .sideNavContactme{
         margin-left: 25px;
     }
+ 
     }
 
     @media only screen and (max-width:460px) {
    
       /* homepage */
     .aboutMe-sideNav{
-        margin-top: 50px;
+        margin-top: 300px;
+        transition: all 0.5s linear;
     }
 
+    .showcase-wrapper{
+/* remove too much space */ 
+        top:0;
+    }
     .showcase-container{
     /* increase width to avoid looking being pinch */
     width:95%;
@@ -891,13 +906,19 @@ font-family: monserrate, sans-serif;
             margin-bottom: 3%;       
         }
    
-    /* add more % to offset plane not reaching H-pad */
-        .plane{
-         top:15%;
-        }
         .card-wrapper{
             padding-bottom: 0;
             margin-bottom:10%;
         }
-
+        .container-fluid-aboutMe{
+            top:50px;
+        }
+        .bottle{
+            top:50px;
+        }
+        .footerAboutme{
+            /* 50px reduced to 30px */
+            top:30px;
+        }
     }
+
