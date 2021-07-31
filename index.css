@@ -885,7 +885,9 @@ font-family: monserrate, sans-serif;
         margin-top: 300px;
         transition: all 0.5s linear;
     }
-
+    .container-plane-component{
+        right:5px;
+    }
     .showcase-wrapper{
 /* remove too much space */ 
         top:0;
