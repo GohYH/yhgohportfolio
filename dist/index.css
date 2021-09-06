@@ -655,8 +655,6 @@ div.htmlContainer:hover figure {
 	transition: transform 2s linear 6s, z-index 2s step-end;	
 }
 
-
-
 /* slide-show on hover effect - END-*/
 
  .showCaseWork-smallViewport{
@@ -870,13 +868,14 @@ font-family: monserrate, sans-serif;
 }
 
 @media only screen and (min-width:1000px){
-    /* aboutMe.html - hide 1 col display above 1000px viewport*/
+    /* aboutMe.html - hide 1 col display above 1000px viewport */
     .showCaseWork-smallViewport{
       display: none;
       }
 }
 
 @media only screen and (max-width:1000px) {
+    
     /* aboutMe.html - hide larger content  */
 .showCaseWork{
     display:none;
@@ -886,9 +885,8 @@ font-family: monserrate, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;  
-    /* margin-top: 200px; */
-    margin-bottom: 0;
-    margin-top: 210px;
+    margin-top: 220px;
+    margin-bottom: 0;  
     
 }
 
@@ -970,8 +968,6 @@ box-shadow: var(--shadow);
           .sideNavContactme{
             margin-left: 20px;
         }
-    }
-@media only screen and (max-width:550px) {    
     
     .aboutMe-helipad-container{
         margin-bottom: 150px;
@@ -1101,7 +1097,6 @@ box-shadow: var(--shadow);
  }
 }
 
-
     @media only screen and (max-width:460px) {
       /* homepage */
     .aboutMe-sideNav{
@@ -1153,3 +1148,4 @@ box-shadow: var(--shadow);
         }
     }
 
+  
