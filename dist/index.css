@@ -65,16 +65,7 @@ margin: 5% 0;
     opacity: 0.3;
 }
 
-/* .helipad-footer{
-    background-color: lightskyblue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-} */
 .helipad-footer img{
-    /* width:20%; */
-    /* padding: 7% 0;  */
     opacity: 0.3;
 }
 
@@ -87,7 +78,7 @@ margin: 5% 0;
 .helipad-textContent {
     text-align: center;
 /* this gives every letter some vanishing point */
-    perspective: 800px;
+    perspective: 800px;    
 }
 
  /* ready go text flipup animation Start */
@@ -232,7 +223,7 @@ span:nth-child(12){
 }
 .showcase-wrapper{
     position: relative;
-    top:200px;
+    top:300px;
 }
 
 /* slideIn Card animation START - homepage & contactMe.html*/
@@ -257,22 +248,51 @@ span:nth-child(12){
     to{opacity:1;}
 }
 /* slideIn Card animation END */
+.showcase-container{
+    /* margin: 5% auto;  */
+    display: grid; 
+    grid-template-areas:". . portrait-left  text-content container container .";
+                    
+    /* grid-template-rows: auto; */
+    margin: 5% auto;
+    width:100%;
+   gap:5%;
+   z-index:1;                         
+}
+.portrait-left{
+grid-area: portrait-left;
+margin-left: 0%;
+}
+div#container{
+grid-area: container;
+width:100%;
+cursor:pointer;
+z-index:1;  
+padding-top: 5%;                       
+}
+.text-content{
+grid-area: text-content;
+z-index:1;
+background-color: var(--bg_paleBlue1);
+opacity:0.9;
 
- .showcase-container{     
-    width: 80%;
+}
+
+ /* .showcase-container{     
+    width: 85%;
     background: var(--card_paleBlue2);
     border: 1px solid red;
     box-shadow: var(--shadow);
     border-radius: 6px;
-    /* margin: 18% auto; */
+    
     margin: 5% auto; 
     display: grid; 
-    grid-template-columns: 3fr 2fr 1fr; 
+    grid-template-columns: 3fr 3fr 2fr; 
     grid-template-rows: 1fr;  
     justify-content: space-around; 
     align-items: center;
    
-    /* for plane fly under */
+    for plane fly under
     position: relative;
     z-index:1;
     opacity:0.9;       
@@ -280,21 +300,19 @@ background-image: url(img/cloud_one.png);
 background-position: center;
 background-size: cover;
 background-repeat: repeat;
-}
+} */
 
     /* html img size reduced */
     .showcase-img-right img{
         max-width:70%;
-      
         /* margin-bottom: 15%; */
-    
     } 
 
 .text-content h1{
-margin-bottom:3%;
+/* margin-bottom:3%; */
 font-family: 'Montserrat', sans-serif;
 font-weight: 900;
-font-size: 3em;
+font-size: 2.5em;
 }
 
 .text-content .text{
@@ -308,7 +326,7 @@ font-size: 3em;
         margin-bottom: 2%;
        }
        .scrollingText h3{
-        font-size: 3vw;
+        font-size: 2.5vw;
         opacity:0.5;
         color: var(--darkLimeGreen);
         position: absolute;
@@ -351,11 +369,7 @@ font-size: 3em;
 }
 
 .cardTop{
-    background: var(--card_paleBlue2);
-    box-shadow: var(--shadow);
-    padding: 1%;
-    /* margin-bottom: 25%; */
-    margin-bottom: 5%;
+    margin-bottom:5px;
     overflow: hidden;
 } 
 .card-grid-container{
@@ -363,14 +377,20 @@ font-size: 3em;
     position:relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    column-gap: 1.5em;
-    margin: 0 auto;
-    overflow: hidden;
-
+    grid-template-areas: ". card-1 card-2 card-3 .";
+    margin-bottom:100px;
+    justify-items:center;
 }
 
+.card-1{
+    grid-area: card-1;
+}
+.card-2{
+    grid-area: card-2;
+}
+.card-3{
+    grid-area: card-3;
+}
 .card-wrapper{
     background: var(--darkBlue);
     box-shadow: var(--shadow);
@@ -378,8 +398,8 @@ font-size: 3em;
     padding:1em;
     opacity: 0.9;
     margin: 5%; 
-    max-width:300px;
-    margin:0 auto;
+    max-width:220px;
+    /* margin:0 auto; */
 }
 
 .cloud-drifting{
@@ -558,16 +578,14 @@ p.card-bottom{
 
  .showCaseWork{
      border-radius: 6px;
-     margin-top: 20%;
-     background-color:var(--darkBlue);   
-     box-shadow: var(--shadow);
+     margin-top: 15%;
      z-index:1;
      opacity: 0.9;
  } 
  .mobileTitle{
      padding-top: 2%;
      text-align: center;
-     color: var(--bg_paleBlue1);
+     color: gray;
     }
 
 .imgContainerTop{
@@ -602,19 +620,20 @@ div.htmlContainer figure{
  }
 
  .slideshowTitle{
-     color: white;
+     color: gray;
      text-align: left;
      margin-left:15%;
  }
 /* slide-show on hover effect - START */
-/* scale3d all set to 1 is default size setting */
 div.htmlContainer figure {
+    /* 1.scale3d all set to 1 is default size setting 2. X,Y,Z origin pt */
 	transform: perspective(1200px) translateZ(0px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1);
 	transform-origin: 140% -5%;
 	transition: none;	
 }
 
 div.htmlContainer:hover figure {
+    /* translateZ(50px) move towards viewr. 2.rotateY(180deg), obj rotate around Y-axis. 3.scale3d decrease X & y to half */
 	transform: perspective(1200px) translateZ(50px)  rotateY(180deg) rotateX(70deg) scale3d(0.5, 0.5, 1);	
 }
 
@@ -658,13 +677,13 @@ div.htmlContainer:hover figure {
 /* slide-show on hover effect - END-*/
 
  .showCaseWork-smallViewport{
-     background-color: var(--darkBlue);
      margin: 20% auto;
      display: flex;
      justify-content: center;
      align-content: center;
      z-index:1;
      opacity: 0.9;
+
  }
 
 .mobile-top-3, .mobile-top-7{
@@ -672,6 +691,7 @@ div.htmlContainer:hover figure {
     padding:5%;
     border-radius: 25px;
     box-shadow: var(--shadow);
+    border:1px solid darkslategray;
 }
 
 .mobile-top-1, .mobile-top-5{
@@ -683,7 +703,7 @@ div.htmlContainer:hover figure {
     position: relative;
     top:60px;
     box-shadow: var(--shadow);
-
+    border:1px solid darkslategray;
 }
 .mobile-top-2, .mobile-top-4, .mobile-top-6, .mobile-top-8{
     width:234px;
@@ -693,16 +713,14 @@ div.htmlContainer:hover figure {
     position: relative;
     top:30px;
     box-shadow: var(--shadow);
+    border:1px solid darkslategray;
 } 
 .html-top-1{
     position:relative;
-    /* transform: rotate(-15deg); */
-    /* top:-80px; */
+
 }
 .html-top-3{
     position:relative;
-    /* transform: rotate(20deg); */
-    /* top:-80px; */
 
 }
 .html-top-2{
@@ -800,13 +818,62 @@ font-family: monserrate, sans-serif;
 /* AboutMe - END */
 
 /* contactMe */
+/* cube animation - Start */
+div#container{
+    perspective: 1500px;
+}
+div#cube{
+    position:relative;
+/* declared preserve-3d so it get passed down to its childs */
+    transform-style: preserve-3d;
+/* Note:cube size & img size have to set so when the cube stay within this parameter when rotate */
+    width: 150px;
+	height: 150px;
+	cursor: pointer;
+	float: right;
+    /* margin: 3% auto; */
+    margin-right: 100px;
+    /* margin-top: 100px;  */
 
-.contactMeContainer{
+}
+div#cube img{
+    position: absolute; 
+    top:0;
+    left:0;
+    display: block;
+	width: 150px;
+	height: 150px;
+    background-color: black;
+    border:1px solid gray;
+    /* opacity:0.8; */
+}
+
+/* make each surface arrange to form into a cube */
+/* Note: translateZ must set to half the width of the cube as the axis orgin start at the center */
+img#front { transform: rotateY(0deg) translateZ(75px); }
+img#back { transform: rotateY(180deg) translateZ(75px);}
+img#bottom { transform: rotateX(-90deg) translateZ(75px);}
+img#left { transform: rotateY(-90deg) translateZ(75px);}
+img#right { transform: rotateY(90deg) translateZ(75px);}
+img#top { transform: rotateX(90deg) translateZ(75px); }
+
+div#cube {
+   transform: rotateX(-25deg) rotateY(-25deg) rotateZ(10deg);
+   transition: transform 2s ease-in-out;
+}
+
+
+div#cube:hover {
+   transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+}
+
+/* cube animation - END */
+
+ .contactMeContainer{
     background-image: url(./img/bg-Computer.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center right;
-
     background-color: var(--card_paleBlue2);
     box-shadow: var(--shadow);
     border-radius: 5px;
@@ -819,7 +886,7 @@ font-family: monserrate, sans-serif;
 
     display: flex;
     flex-direction: row;
-}
+} 
 
 
 .contactMeTextContent h1{ 
@@ -830,10 +897,27 @@ font-family: monserrate, sans-serif;
     font-weight: bold;  
 }
 
-
 @media only screen and (max-width:1200px) {
+    /* index.html */
+    .showcase-container{
+        /* added 2 portrait-left so to make container centered */
+        grid-template-areas: 
+                            ". portrait-left ."
+                            ". portrait-left container"
+                            ". portrait-left ."
+                            "text-content text-content text-content";   
+    }
+
+
+.text-content h2, .text-content h4{
+    font-size:medium;
+}
+
+div#cube{
+    margin-left: 50px;
+    }
  .showCaseWork{
-     margin-top: 25%;
+     margin-top: 28%;
     overflow:hidden;
  }
     /* index.js */
@@ -847,11 +931,12 @@ font-family: monserrate, sans-serif;
         /* width: 18%; */
         font-size: 0.8em;
         text-align: center;
+       
     }
 /* reduce from 6.25em to accommodate smaller width */
-    .card-grid-container{
+    /* .card-grid-container{
         column-gap: 3em;
-    }
+    } */
     .card-bottom-top{
         /* border-top: 1px solid var(--darkLimeGreen); */
         display: flex;
@@ -921,32 +1006,9 @@ box-shadow: var(--shadow);
         .sideNav p{
             font-size: 0.7em;
         }
-  
-        .showcase-container{
-            overflow: hidden;
-            display: grid;
-            justify-items: center;
-            grid-template-columns: 1fr;
-            row-gap: 3%;      
-        } 
-        .portrait-left{
-            margin-top: 5%;
-        }
-        .showcase-img-right img{
-            width:50%;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 10%;
-        } 
-   
-/* increase the card bottom so when viewport decrease it appears to have a lifted gap at bottom edge */
-        .card-grid-container{
-            gap:1em;
-        }
-        
+       
         .helipad-footer{
-            height: 220px;
-        
+            height: 80px; 
         }
         /*AboutMe page*/
         .container-fluid-aboutMe h4, 
@@ -991,30 +1053,15 @@ box-shadow: var(--shadow);
             font-size: 0.7em;
             margin-left:-85px;
         }
-        .showcase-container{
-           /* flex keeps content center by centering with space evenly */  
-            display: flex;
-            flex-direction: column;
-            justify-content:space-around; 
-        }
-        .showcase-container img{
-            margin-top:3%;
-          
-        }
-        .portrait-left{
-            margin: 0;
-        }
+
         .helipad-textContent span, .helipad-footer span{
             font-size: 2.5em;
-            margin-top: 10%;
+            margin-top: 5%;
         }
-        .text-content h1{
-            padding-bottom: 5%;
-        }
+
         .text-content{
-            text-align: center;
-            font-size: xx-small;
-            padding: 10%;       
+            margin: 0 auto;
+            text-align: left;
         }
 
     /* remove cloud on this viewport - as animation scroll caused a empty band on right screen */
@@ -1032,13 +1079,6 @@ box-shadow: var(--shadow);
         }
         .scrollingText h3{
             font-size: 1em;
-        }
-
-        .card-grid-container{
-            grid-template-columns: 1fr;
-            justify-items: center;
-            row-gap:0.5em;
-            /* width:100%;  */
         }
 
         /*AboutMe page*/
@@ -1096,6 +1136,33 @@ box-shadow: var(--shadow);
      font-size: smaller;
  }
 }
+@media only screen and (max-width:800px) {
+    .showcase-container{
+        grid-template-areas: 
+                            ". portrait-left ."
+                            ". text-content ." 
+                            ". container .";
+                            gap:5%;
+                            margin-bottom: 120px;
+                            
+    }
+    .text-content{
+        margin-top:2%;
+    }
+    .showcase-wrapper{
+        position: relative;
+        /* reduced */
+        top:200px;
+    }
+}
+@media only screen and (max-width:550px) {
+.card-grid-container{
+    grid-template-areas: "card-1"
+                        "card-2"
+                        "card-3";
+                        margin-bottom: 0;
+}
+}
 
     @media only screen and (max-width:460px) {
       /* homepage */
@@ -1106,18 +1173,23 @@ box-shadow: var(--shadow);
     .container-plane-component{
         right:5px;
     }
-    .showcase-wrapper{
-/* remove too much space */ 
-        top:0;
-        margin-top:80px;
-    }
+/* remove dot at both sides so to prevent offset to one side*/
     .showcase-container{
-    /* increase width to avoid looking being pinch */
-    width:95%;
+        grid-template-areas: 
+                            "portrait-left"
+                            "text-content"  
+                            "."   
+                            "container";                                              
     }
-        .showcase-container img{
-            margin-top:0;
+
+        .text-content h1{
+            font-size: 2em;
         }
+        .showcase-wrapper{
+            /* reduced again */
+            top:110px;
+        }
+
         .helipad-container{
            padding-bottom: 0;
         }
@@ -1136,8 +1208,7 @@ box-shadow: var(--shadow);
         }
         .showCaseWork-smallViewport{
             width: 95%;
-            margin-top: 0;
-            
+            margin-top: 100px;     
          }
         .bottle{
             top:50px;
