@@ -20,7 +20,7 @@
     <script>
       $(window).scroll(function() {
 
-          if ($(this).scrollTop()>300)
+          if ($(this).scrollTop()>100)
           {
             $('.cardTop').addClass('showcase-wrapper');
 
@@ -28,7 +28,6 @@
         
           if ($(this).scrollTop()>1900)
            {
-            //  $('.helipad-footer').addClass('helipad-trigger-animation')
               
               $('.plane').css("top", "70%");
 
@@ -43,27 +42,8 @@
            }
        });
 
-  
-// start
-  //     const observer = new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     const card = entry.target.querySelector('.showcase');
-  
-  //     if (entry.isIntersecting) {
-  //       card.classList.add('showcase-wrapper');
-  //       console.log("successful")
-  //       return; // if we added the class, exit the function
-  //     }
-  
-  //     // We're not intersecting, so remove the class!
-  //     card.classList.remove('showcase-wrapper');
-  //   });
-  // });
-  
-  // observer.observe(document.querySelector('.helipad-textContent'));
-  // console.log("failed")
       </script>
-    <!-- temp end -->
+   
 </head>
 <body>
       <nav class="navbar navbar-expand-lg navbar-dark navBg my-center">
@@ -121,10 +101,6 @@
                       <div class="portrait-left">
                         <img class="portrait rounded img-fluid" src="./img/GohYH_Portrait.png" alt="portrait">
                       </div>
-
-                      <!-- <div class="showcase-img-right">
-                        <img src="img/html5_3D.png" alt="">
-                      </div> -->
                       <div id="container" > 
                         <div id="cube" >
                           <img src="./img/htmlCSS.png" id="front" alt="cube front image" />

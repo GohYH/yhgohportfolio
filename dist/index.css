@@ -228,20 +228,29 @@ span:nth-child(12){
 
 /* slideIn Card animation START - homepage & contactMe.html*/
 .showcase-wrapper, .contactMeTextContent{
-    animation: slideIn 4s linear, fadeIn 2s ease-in;
+    animation: slideIn 0.4s linear, fadeIn 4s ease-in;
 }
 @keyframes slideIn{
-    0%{transform: translateY(400px);
+    0%{transform: translateY(100px);
     animation-timing-function: ease-out}
 
-    60%{transform: translateY(-50px);
+    20%{transform: translateY(-30px);
     animation-timing-function: ease-in}
 
-    80%{transform: translateY(10px);
+    40%{transform: translateY(10px);
     animation-timing-function: ease-out}
+
+    60%{transform: translateY(-10px);
+    animation-timing-function: ease-in}
+
+    80%{transform: translateY(3px);
+    animation-timing-function: ease-out}
+    
+    90%{transform: translateY(-3px);
+    animation-timing-function: ease-in}
 
     100%{transform:translateY(0);
-    animation-timing-function: ease-in}
+    animation-timing-function: ease-out}
 }
 @keyframes fadeIn{
     from {opacity: 0;}
@@ -251,10 +260,8 @@ span:nth-child(12){
 .showcase-container{
     /* margin: 5% auto;  */
     display: grid; 
-    grid-template-areas:". . portrait-left  text-content container container .";
-                    
-    /* grid-template-rows: auto; */
-    margin: 5% auto;
+    grid-template-areas:". . portrait-left  text-content container container ."; 
+    justify-content: center;
     width:100%;
    gap:5%;
    z-index:1;                         
@@ -272,35 +279,10 @@ padding-top: 5%;
 }
 .text-content{
 grid-area: text-content;
-z-index:1;
 background-color: var(--bg_paleBlue1);
-opacity:0.9;
-
+/* opacity:0.9; */
 }
 
- /* .showcase-container{     
-    width: 85%;
-    background: var(--card_paleBlue2);
-    border: 1px solid red;
-    box-shadow: var(--shadow);
-    border-radius: 6px;
-    
-    margin: 5% auto; 
-    display: grid; 
-    grid-template-columns: 3fr 3fr 2fr; 
-    grid-template-rows: 1fr;  
-    justify-content: space-around; 
-    align-items: center;
-   
-    for plane fly under
-    position: relative;
-    z-index:1;
-    opacity:0.9;       
-background-image: url(img/cloud_one.png);
-background-position: center;
-background-size: cover;
-background-repeat: repeat;
-} */
 
     /* html img size reduced */
     .showcase-img-right img{
@@ -402,26 +384,6 @@ font-size: 2.5em;
     /* margin:0 auto; */
 }
 
-.cloud-drifting{
-        /* drifting cloud animation */
-        background-image: url(img/cloud-drifting.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat:no-repeat;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-     
-        /* Starting position */
-        -moz-transform:translateX(100%);
-        -webkit-transform:translateX(100%);	
-        transform:translateX(100%);
-        /* Apply animation to this element */	
-        -moz-animation: scrollingText 30s linear infinite;
-        -webkit-animation: scrollingText 30s linear infinite;
-        animation: scrollingText 30s linear infinite;
-    
-}
 
 .card-wrapper img{
     width:100%;
@@ -1071,7 +1033,6 @@ box-shadow: var(--shadow);
         /* to room for top & bottom to show planeLanding */
         .cardTop{
           /* solve issue of cardTop item overlapping on bottom element  */
-          margin-top: -10%;
           background: none;
           box-shadow: none;
           margin-bottom: 0;   
@@ -1179,9 +1140,13 @@ box-shadow: var(--shadow);
                             "portrait-left"
                             "text-content"  
                             "."   
-                            "container";                                              
+                            "container";    
+                                                                      
     }
-
+div#container{
+    /* center cube */
+    margin-left: 8%;
+}
         .text-content h1{
             font-size: 2em;
         }
