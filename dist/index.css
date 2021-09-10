@@ -1142,12 +1142,17 @@ box-shadow: var(--shadow);
                             "portrait-left"
                             "text-content"  
                             "."   
-                            "container"; 
-                            overflow:hidden;                                                                      
+                            "container"
+                            "container";
+                            margin-bottom: 0;
+                            overflow:hidden;                                                                 
     }
+
 div#container{
     /* center cube */
     margin-left: 8%;
+/* prevent cube being cut-off */
+    min-height:320px;
 }
 .text-content{
     text-align: center;
@@ -1171,6 +1176,7 @@ div#container{
    
         .card-wrapper{
             padding-bottom: 0;
+            margin-top:0;
             margin-bottom:10%;
         }
         .container-fluid-aboutMe{
