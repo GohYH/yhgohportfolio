@@ -810,7 +810,13 @@ div#cube img{
     border:1px solid gray;
     /* opacity:0.8; */
 }
-
+p.cubeMsg{
+    margin-top:200px;
+    width:180px;
+    font-size: 0.8em;
+    color:var(--darkLimeGreen);
+    opacity: 0.8;  
+}
 /* make each surface arrange to form into a cube */
 /* Note: translateZ must set to half the width of the cube as the axis orgin start at the center */
 img#front { transform: rotateY(0deg) translateZ(75px); }
@@ -827,7 +833,8 @@ div#cube {
 
 
 div#cube:hover {
-   transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg);
+   /* transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg); */
+   transform: rotateX(30deg) rotateY(-200deg) rotateZ(-10deg);
 }
 
 /* cube animation - END */
@@ -1112,6 +1119,10 @@ box-shadow: var(--shadow);
     .text-content{
         margin-top:2%;
     }
+    p.cubeMsg{
+        text-align: right;
+        width:400px
+    }
     .showcase-wrapper{
         position: relative;
         /* reduced */
@@ -1156,6 +1167,9 @@ div#container{
 }
 .text-content{
     text-align: center;
+}
+p.cubeMsg{
+    display: none;
 }
         .text-content h1{
             font-size: 2em;
