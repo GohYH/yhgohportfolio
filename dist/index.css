@@ -270,6 +270,7 @@ span:nth-child(12){
 grid-area: portrait-left;
 margin-left: 0%;
 }
+
 div#container{
 grid-area: container;
 width:100%;
@@ -868,6 +869,7 @@ div#cube:hover {
                             ". portrait-left container"
                             ". portrait-left ."
                             "text-content text-content text-content";   
+                           
     }
 
 
@@ -1140,12 +1142,15 @@ box-shadow: var(--shadow);
                             "portrait-left"
                             "text-content"  
                             "."   
-                            "container";    
-                                                                      
+                            "container"; 
+                            overflow:hidden;                                                                      
     }
 div#container{
     /* center cube */
     margin-left: 8%;
+}
+.text-content{
+    text-align: center;
 }
         .text-content h1{
             font-size: 2em;
