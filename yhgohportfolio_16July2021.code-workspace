@@ -1,11 +1,25 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"path": "..\\animation"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "path": "..\\animation"
+    },
+    {
+      "path": "..\\..\\Linkedin"
+    },
+    {
+      "path": "..\\..\\..\\..\\Desktop\\HTML TEST"
+    },
+    {
+      "path": "..\\yhgohportfolio_ContentEditor"
+    },
+    {
+      "path": "..\\yhgohoportfolio_jobTitle"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "yhgohportfolio"
+  }
 }
