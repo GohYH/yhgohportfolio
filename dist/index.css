@@ -92,7 +92,7 @@ margin: 5% 0;
     /* important: must set inline-block inorder for animation to work */
     display: inline-block;
     /* x: 50% of the way across letter bound by box & 70% */
-    transform-origin: 50% 70%;
+    transform-origin: 50% 70%;    
 }
 /* alternate text color */
 span:nth-child(2n){
@@ -797,7 +797,6 @@ div#cube{
     /* margin: 3% auto; */
     margin-right: 100px;
     /* margin-top: 100px;  */
-
 }
 div#cube img{
     position: absolute; 
@@ -832,7 +831,7 @@ div#cube {
 }
 
 
-div#cube:hover {
+div#cube:hover{
    /* transform: rotateX(40deg) rotateY(-215deg) rotateZ(-10deg); */
    transform: rotateX(30deg) rotateY(-200deg) rotateZ(-10deg);
 }
