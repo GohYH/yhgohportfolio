@@ -1214,7 +1214,7 @@ p.cubeMsg{
         .first-container-AM h4, .middle-container-AM h4, .last-container-AM h4{
             font-size: 0.9em;
         }
-        .first-container-AM p, .middle-container-AM p, .last-container-AM p{
+        .first-container-AM p, .second-container-AM p, .last-container-AM p{
             font-size: 0.8em;
         }
         .showCaseWork-smallViewport{
